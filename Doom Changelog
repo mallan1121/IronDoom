@@ -16,3 +16,7 @@ Now you just need a WAD file to see if it runs!
 WAD breaks with xdoom only runs in PseudoColor 256 screens.
 
 The breaking issue is call to XMatchVisualInfo() function returning 0 and throwing an error.
+
+
+Lots of fun stuff with being unable to run Xubuntu in 256 mode. I need to either a) learn enough X11 to be able to create a child window with
+all the settings Doom needs to run, or convert all the Doom code to run in 32 bit color. Or do both :)
