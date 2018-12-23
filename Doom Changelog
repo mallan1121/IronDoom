@@ -1,0 +1,18 @@
+Packages needed for doom build
+
+libx11-dev
+libxext-dev
+
+i_video.c missing errnos.h --> modify to errno.h
+
+/usr/bin/ld: errno: TLS definition in /lib/i386-linux-gnu/libc.so.6 section .tbss mismatches non-TLS reference in linux/i_sound.o
+/lib/i386-linux-gnu/libc.so.6: error adding symbols: Bad value
+collect2: error: ld returned 1 exit status
+
+add #include <errno.h> to i_sound.c
+
+Now you just need a WAD file to see if it runs!
+
+WAD breaks with xdoom only runs in PseudoColor 256 screens.
+
+The breaking issue is call to XMatchVisualInfo() function returning 0 and throwing an error.
